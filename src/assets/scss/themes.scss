@@ -1,0 +1,81 @@
+@mixin baseTheme {
+  // Font Family
+  --font-body: 'Poppins', 'sans-serif';
+  --font-sans: 'Helvetica Neue', 'Roboto', 'sans-serif';
+  --font-serif: 'Georgia', 'serif';
+  --font-mono: 'Roboto Mono', 'monoscpace';
+  --font-icon: 'Material Icons';
+  // fontWeight
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+}
+
+@mixin darkTheme {
+  // Background color
+  --bg-color: rgba(32, 33, 36, 1);
+  // Light Background color
+  --bg-light-color: rgba(255, 255, 255, 0.04);
+  // Dark Background color
+  --bg-dark-color: rgba(0, 0, 0, 0.2);
+  // Text color
+  --fg-color: rgba(255, 255, 255, 0.9);
+  // Light Text color
+  --fg-light-color: rgba(255, 255, 255, 0.5);
+  // Border color
+  --brd-color: rgba(255, 255, 255, 0.05);
+  // Error color
+  --err-color: rgba(255, 255, 255, 0.05);
+  // Tooltip color
+  --tt-color: rgba(48, 48, 48, 1);
+  // Active text color
+  // --act-color: rgba(32, 33, 36, 1);
+}
+
+@mixin lightTheme {
+  // Background color
+  --bg-color: rgba(247, 247, 247, 1);
+  // Light Background color
+  --bg-light-color: rgba(0, 0, 0, 0.05);
+  // Dark Background color
+  --bg-dark-color: rgba(0, 0, 0, 0.02);
+  // Text color
+  --fg-color: rgba(0, 0, 0, 0.9);
+  // Light Text color
+  --fg-light-color: rgba(0, 0, 0, 0.6);
+  // Border color
+  --brd-color: rgba(0, 0, 0, 0.1);
+  // Error color
+  --err-color: rgba(0, 0, 0, 0.1);
+  // Tooltip color
+  --tt-color: rgba(255, 255, 255, 1);
+}
+
+@mixin blueTheme {
+  // Acent color
+  --ac-color: rgba(207, 229, 252, 1);
+  // Active text color
+  --act-color: rgba(108, 165, 208, 1);
+}
+
+:root {
+  @include baseTheme;
+  @include lightTheme;
+  @include blueTheme;
+}
+
+:root.light {
+  @include lightTheme;
+}
+
+:root.dark {
+  @include darkTheme;
+}
+
+:root[data-accent='blue'] {
+  @include blueTheme;
+}
