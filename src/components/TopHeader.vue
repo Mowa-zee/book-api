@@ -3,7 +3,6 @@
     <header class="normal fixed onScroll">
       <div ref="headerHeight" class="flex items-center inner">
         <div class="w-1/2">
-          <!-- <Cart /> -->
           <p id="logo">
             <router-link to="/">The BookAPI</router-link>
           </p>

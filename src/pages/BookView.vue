@@ -16,7 +16,9 @@
           </div>
         </div>
       </div>
-      <modal :bookDetail="bookDetail" v-show="isModalVisible" @closeModal="closeModal" />
+      <transition name="modal">
+        <modal :bookDetail="bookDetail" v-show="isModalVisible" @closeModal="closeModal" />
+      </transition>
       <div id="modal-overlay" class="soma-overlay" :class="{ 'is-open': isOpen }" @click.prevent="closeModal"></div>
     </div>
 </template>

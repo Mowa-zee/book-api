@@ -127,7 +127,8 @@ export default {
     },
 
     submitSearch(){
-      this.$router.push({ path: '/search', query: { keyword: this.keyword }})
+      // Logic search here
+      this.handleMenuClose()
     },
 
     mobileBindings() {

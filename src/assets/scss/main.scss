@@ -74,6 +74,17 @@
     font-size: 4.5rem;
   }
 }
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity .5s;
+}
+
+.modal-enter,
+.modal-leave-to {
+  opacity: 0;
+}
+
 .book{
   transition: .3s;
   display: flex;
