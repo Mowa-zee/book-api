@@ -48,8 +48,7 @@
     }
     .logo {
       a {
-        font-family: 'Circular', Helvetica, Arial, sans-serif;
-        font-weight: 900;
+        font-weight: 7000;
         font-size: 0.9rem;
         text-transform: uppercase;
         display: block;
@@ -84,7 +83,6 @@
           a {
             @apply text-3xl;
 
-            font-family: 'Circular', Helvetica, Arial, sans-serif;
             font-weight: 700;
             position: relative;
             line-height: 1.6;
@@ -114,19 +112,11 @@
                 background-color: #222326;
                 position: absolute;
                 right: 1rem;
-                -webkit-transition: background-color
-                    cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-                  right cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-                -o-transition: background-color
-                    cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-                  right cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
                 transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1)
                     0.2s,
                   right cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
                 top: 50%;
                 margin-top: -1rem;
-                -webkit-transform: translateY(0.43rem) rotateZ(-45deg);
-                -ms-transform: translateY(0.43rem) rotate(-45deg);
                 transform: translateY(0.43rem) rotateZ(-45deg);
               }
               &:before {
@@ -137,19 +127,11 @@
                 background-color: #222326;
                 position: absolute;
                 right: 1rem;
-                -webkit-transition: background-color
-                    cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-                  right cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-                -o-transition: background-color
-                    cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-                  right cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
                 transition: background-color cubic-bezier(0.215, 0.61, 0.355, 1)
                     0.2s,
                   right cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
                 bottom: 50%;
                 margin-bottom: -1rem;
-                -webkit-transform: translateY(-0.03rem) rotateZ(45deg);
-                -ms-transform: translateY(-0.03rem) rotate(45deg);
                 transform: translateY(-0.03rem) rotateZ(45deg);
               }
               &:hover {
@@ -209,12 +191,6 @@
     left: 0;
     z-index: 999;
     position: fixed;
-    -webkit-transition: padding cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s,
-      background-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s,
-      border-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
-    -o-transition: padding cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s,
-      background-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s,
-      border-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
     transition: padding cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s,
       background-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s,
       border-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
@@ -256,8 +232,6 @@ header {
       height: 0;
       z-index: 2;
       visibility: hidden;
-      -webkit-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
-      -o-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
       transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
       .self-center {
         width: calc(100% - 8rem);
@@ -268,14 +242,11 @@ header {
         position: absolute;
         top: 3rem;
         right: 3rem;
-        font-family: 'Circular', Helvetica, Arial, sans-serif;
         font-weight: 500;
         font-size: 1rem;
         color: var(--act-color);
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
-        -o-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
         transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
       }
       #close-search.is-active {
@@ -291,8 +262,6 @@ header {
         border: 0;
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
-        -o-transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
         transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
         &:-webkit-input-placeholder {
           color: #fff;
@@ -374,8 +343,6 @@ header {
             width: 1.3rem;
             margin-right: 1rem;
             color: #222326;
-            -webkit-transition: fill cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-            -o-transition: fill cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
             transition: fill cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
           }
           &:hover {
@@ -396,8 +363,6 @@ header {
       border-top-width: 0;
       border-style: solid;
       border-color: var(--act-color);
-      -webkit-transition: border cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
-      -o-transition: border cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
       transition: border cubic-bezier(0.23, 1, 0.32, 1) 0.4s;
       li {
         margin-right: 0;

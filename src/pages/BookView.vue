@@ -19,7 +19,7 @@
       <transition name="modal">
         <modal :bookDetail="bookDetail" v-show="isModalVisible" @closeModal="closeModal" />
       </transition>
-      <div id="modal-overlay" class="soma-overlay" :class="{ 'is-open': isOpen }" @click.prevent="closeModal"></div>
+      <div id="modal-overlay" class="modal-overlay" :class="{ 'is-open': isOpen }" @click.prevent="closeModal"></div>
     </div>
 </template>
 
@@ -67,23 +67,22 @@ export default {
     }
   },
   created() {
+    // Get 10 result of books from google book api
     this.$http.get("https://www.googleapis.com/books/v1/volumes?q=stephen+king+inauthor:king&maxResults=10&printType=books")
-        .then((response) => {
-          this.books = response.data.items
-          // Make Categories array value
-          for(let i = 0; i < this.books.length; i++){
-            if(typeof this.books[i].volumeInfo.categories !== 'undefined'){
-              for(let j = 0; j < this.books[i].volumeInfo.categories.length; j++) {
-                if(this.categories.indexOf(this.books[i].volumeInfo.categories[j]) === -1){
-                  this.categories.push(this.books[i].volumeInfo.categories[j])
-                }
-              }
+    .then((response) => {
+      this.books = response.data.items
+      // Make Categories array value
+      for(let i = 0; i < this.books.length; i++){
+        if(typeof this.books[i].volumeInfo.categories !== 'undefined'){
+          for(let j = 0; j < this.books[i].volumeInfo.categories.length; j++) {
+            if(this.categories.indexOf(this.books[i].volumeInfo.categories[j]) === -1){
+              this.categories.push(this.books[i].volumeInfo.categories[j])
             }
           }
-
-        })
-        .catch((error) => { reject(error) })
-    
+        }
+      }
+    })
+    .catch((error) => { reject(error) })
   },
   methods:{
     onSort(sort){
@@ -106,7 +105,9 @@ export default {
       })
     },
     showModal(id) {
+      // Open modal overlay
       this.isOpen = true
+      // Using 'id' get book detail
       const URL = 'https://www.googleapis.com/books/v1/volumes/' + id
         this.$http.get(URL).then((response) => {
             this.bookDetail = response.data

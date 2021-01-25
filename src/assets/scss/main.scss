@@ -10,7 +10,7 @@
 
 
 
-.soma-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,10 +20,6 @@
   background-color: #222326;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity cubic-bezier(0.23, 1, 0.32, 1) 0.7s,
-    visibility cubic-bezier(0.23, 1, 0.32, 1) 0.7s;
-  -o-transition: opacity cubic-bezier(0.23, 1, 0.32, 1) 0.7s,
-    visibility cubic-bezier(0.23, 1, 0.32, 1) 0.7s;
   transition: opacity cubic-bezier(0.23, 1, 0.32, 1) 0.7s,
     visibility cubic-bezier(0.23, 1, 0.32, 1) 0.7s;
   cursor: pointer;
@@ -50,8 +46,6 @@
   border-width: 3px;
   border-color: var(--ac-color);
   background-color: var(--ac-color);
-  -webkit-transition: background-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s !important;
-  -o-transition: background-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s !important;
   transition: background-color cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s !important;
   z-index: -1;
 }

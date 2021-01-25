@@ -5,14 +5,13 @@
     </div>
     <div
       id="header-overlay"
-      class="soma-overlay"
+      class="modal-overlay"
       :class="{ 'is-open': isOpen }"
       @click.prevent="handleMenuClose"
     ></div>
     <div class="lateral fixed-lateral right" :class="{ 'is-open': isOpen }">
       <div
         class="search flex justify-center is-open"
-        
       >
         <div class="self-center">
           <a id="close-search" href="#" class="is-active" @click.prevent="handleMenuClose">Close</a>
@@ -53,7 +52,6 @@ export default {
       this.handleMenuClose()
     }
   },
-  created() {},
   mounted() {
     this.mobileBindings()
   },
